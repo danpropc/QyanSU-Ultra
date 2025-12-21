@@ -325,6 +325,11 @@ static int do_get_feature(void __user *arg)
     return 0;
 }
 
+static int do_get_sulog(void __user *arg)
+{
+    return ksu_sulog_pop_user(arg);
+}
+
 static int do_set_feature(void __user *arg)
 {
     struct ksu_set_feature_cmd cmd;
@@ -798,6 +803,12 @@ static const struct ksu_ioctl_cmd_map ksu_ioctl_handlers[] = {
       .name = "GET_ENABLE_KPM",
       .handler = do_enable_kpm,
       .perm_check = manager_or_root },
+#if __SULOG_GATE
+    { .cmd = KSU_IOCTL_GET_SULOG,
+      .name = "GET_SULOG",
+      .handler = do_get_sulog,
+      .perm_check = manager_or_root },
+#endif
 #ifdef CONFIG_KSU_MANUAL_SU
     { .cmd = KSU_IOCTL_MANUAL_SU,
       .name = "MANUAL_SU",

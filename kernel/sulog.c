@@ -147,89 +147,6 @@ static bool dedup_should_print(uid_t uid, u8 type, const char *content,
     return true;
 }
 
-static void sulog_process_queue(void)
-{
-    struct file *fp;
-    struct sulog_entry *entry, *tmp;
-    LIST_HEAD(local_queue);
-    loff_t pos = 0;
-    unsigned long flags;
-    const struct cred *old_cred;
-
-    spin_lock_irqsave(&dedup_lock, flags);
-    list_splice_init(&sulog_queue, &local_queue);
-    spin_unlock_irqrestore(&dedup_lock, flags);
-
-    if (list_empty(&local_queue))
-        return;
-
-    old_cred = override_creds(ksu_cred);
-
-    fp = filp_open(SULOG_PATH, O_WRONLY | O_CREAT | O_APPEND, 0640);
-    if (IS_ERR(fp)) {
-        pr_err("sulog: failed to open log file: %ld\n", PTR_ERR(fp));
-        goto revert_creds_out;
-    }
-
-    if (fp->f_inode->i_size > SULOG_MAX_SIZE) {
-        if (vfs_truncate(&fp->f_path, 0))
-            pr_err("sulog: failed to truncate log file\n");
-        pos = 0;
-    } else {
-        pos = fp->f_inode->i_size;
-    }
-
-    list_for_each_entry (entry, &local_queue, list)
-        kernel_write(fp, entry->content, strlen(entry->content), &pos);
-
-    vfs_fsync(fp, 0);
-    filp_close(fp, 0);
-
-revert_creds_out:
-    revert_creds(old_cred);
-
-    list_for_each_entry_safe (entry, tmp, &local_queue, list) {
-        list_del(&entry->list);
-        kfree(entry);
-    }
-}
-
-static void sulog_task_work_handler(struct callback_head *work)
-{
-    sulog_process_queue();
-    kfree(work);
-}
-
-static void sulog_schedule_task_work(void)
-{
-    struct task_struct *tsk;
-    struct callback_head *cb;
-    int ret;
-
-    tsk = get_pid_task(find_vpid(1), PIDTYPE_PID);
-    if (!tsk) {
-        pr_err("sulog: failed to find init task\n");
-        return;
-    }
-
-    cb = kzalloc(sizeof(*cb), GFP_ATOMIC);
-    if (!cb) {
-        pr_err("sulog: failed to allocate task_work callback\n");
-        goto put_task;
-    }
-
-    cb->func = sulog_task_work_handler;
-
-    ret = task_work_add(tsk, cb, TWA_RESUME);
-    if (ret) {
-        pr_err("sulog: failed to queue task work: %d\n", ret);
-        kfree(cb);
-    }
-
-put_task:
-    put_task_struct(tsk);
-}
-
 static void sulog_add_entry(char *log_buf, size_t len, uid_t uid, u8 dedup_type)
 {
     struct sulog_entry *entry;
@@ -250,8 +167,61 @@ static void sulog_add_entry(char *log_buf, size_t len, uid_t uid, u8 dedup_type)
     spin_lock_irqsave(&dedup_lock, flags);
     list_add_tail(&entry->list, &sulog_queue);
     spin_unlock_irqrestore(&dedup_lock, flags);
+}
 
-    sulog_schedule_task_work();
+struct ksu_get_sulog_cmd {
+    __aligned_u64 arg;
+    __u32 buf_size;
+};
+
+int ksu_sulog_pop_user(void __user *arg)
+{
+    struct sulog_entry *entry, *tmp;
+    LIST_HEAD(local_queue);
+    char *output_buf = NULL;
+    size_t output_size;
+    size_t offset = 0;
+    int ret = 0;
+    unsigned long flags;
+
+    if (copy_from_user(&cmd, arg, sizeof(cmd)))
+        return -EFAULT;
+
+    output_size = cmd.buf_size ? cmd.buf_size : 4096;
+
+    if (!cmd.arg || output_size == 0)
+        return -EINVAL;
+
+    output_buf = kzalloc(output_size, GFP_KERNEL);
+    if (!output_buf)
+        return -ENOMEM;
+
+    spin_lock_irqsave(&dedup_lock, flags);
+    list_splice_init(&sulog_queue, &local_queue);
+    spin_unlock_irqrestore(&dedup_lock, flags);
+
+    list_for_each_entry_safe (entry, tmp, &local_queue, list) {
+        int written = snprintf(output_buf + offset, output_size - offset, "%s", entry->content);
+        if (written < 0) {
+            ret = -EFAULT;
+            break;
+        }
+        if (written >= (int)(output_size - offset)) {
+            ret = -ENOSPC;
+            break;
+        }
+        offset += written;
+        list_del(&entry->list);
+        kfree(entry);
+    }
+
+    if (ret == 0) {
+        if (copy_to_user((void __user *)cmd.arg, output_buf, offset))
+            ret = -EFAULT;
+    }
+
+    kfree(output_buf);
+    return ret;
 }
 
 void ksu_sulog_report_su_grant(uid_t uid, const char *comm, const char *method)

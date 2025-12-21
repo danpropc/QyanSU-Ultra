@@ -93,6 +93,8 @@ void ksu_sulog_report_syscall(uid_t uid, const char *comm, const char *syscall,
 
 int ksu_sulog_init(void);
 void ksu_sulog_exit(void);
+
+int ksu_sulog_pop_user(void __user *arg);
 #endif // __SULOG_GATE
 
 #endif /* __KSU_SULOG_H */

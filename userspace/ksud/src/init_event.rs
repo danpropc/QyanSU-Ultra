@@ -25,6 +25,9 @@ pub fn on_post_data_fs() -> Result<()> {
     #[cfg(unix)]
     let _ = catch_bootlog("dmesg", &["dmesg", "-w", "-r"]);
 
+    // Start background sulog poller
+    crate::sulog_poller::start();
+
     if utils::has_magisk() {
         warn!("Magisk detected, skip post-fs-data!");
         return Ok(());

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home">Trang chủ</string>
-    <string name="learn_more">Tìm hiểu thêm</string>
     <string name="home_not_installed">Chưa cài đặt</string>
     <string name="home_click_to_install">Nhấn để cài đặt</string>
     <string name="home_working">Đang hoạt động</string>
     <string name="home_working_version">Phiên bản: %s</string>
     <string name="home_unsupported">Không được hỗ trợ</string>
-    <string name="home_unsupported_reason">Không phát hiện được Trình điều khiển SukiSU Ultra trên Kernel của bạn, Kernel sai?</string>
+    <string name="home_unsupported_reason">Không phát hiện được Trình điều khiển QyanSU Ultra trên Kernel của bạn, Kernel sai?</string>
     <string name="home_kernel">Phiên bản Kernel</string>
     <string name="home_susfs_version">Phiên bản SuSFS</string>
     <string name="home_manager_version">Phiên bản Trình quản lý</string>
@@ -31,11 +30,10 @@
     <string name="reboot_userspace">Khởi động lại mềm</string>
     <string name="reboot_recovery">Khởi động lại vào Recovery</string>
     <string name="reboot_bootloader">Khởi động lại vào Bootloader</string>
-    <string name="reboot_download">Khởi động lại vào Download</string>
+    <string name="reboot_download">Khởi động lại vào Download Mode</string>
     <string name="reboot_edl">Khởi động lại vào EDL</string>
     <string name="about">Thông tin</string>
     <string name="module_uninstall_confirm">Bạn có THẬT SỰ muốn gỡ cài đặt module %s không?</string>
-    <string name="metamodule_uninstall_confirm">Bạn có chắc chắn muốn gỡ cài đặt module %s không? Thao tác này sẽ ảnh hưởng đến tất cả các module và một số tính năng do siêu module cung cấp (chẳng hạn như mount) sẽ không còn hoạt động nữa</string>
     <string name="module_uninstall_success">%s đã được gỡ cài đặt</string>
     <string name="module_uninstall_failed">Gỡ cài đặt thất bại: %s</string>
     <string name="module_version">Phiên bản</string>
@@ -62,16 +60,16 @@
     <string name="profile_selinux_context">Bối cảnh SELinux</string>
     <string name="profile_umount_modules">Umount modules</string>
     <string name="failed_to_update_app_profile">Cập nhật Hồ sơ ứng dụng cho %s thất bại</string>
-    <string name="require_kernel_version" formatted="false">Phiên bản SukiSU Ultra hiện tại %s quá thấp để Trình quản lý hoạt động bình thường. Vui lòng cập nhật lên phiên bản %s hoặc cao hơn!</string>
+    <string name="require_kernel_version" formatted="false">Phiên bản QyanSU Ultra hiện tại %s quá thấp để Trình quản lý hoạt động bình thường. Vui lòng cập nhật lên phiên bản %s hoặc cao hơn!</string>
     <string name="settings_umount_modules_default">Umount modules</string>
     <string name="settings_umount_modules_default_summary">Giá trị mặc định chung cho \"Umount modules\" trong Hồ sơ ứng dụng. Nếu được bật, mọi thay đổi hệ thống do các module gây ra sẽ bị gỡ bỏ khỏi hệ thống và các ứng dụng chưa thiết lập hồ sơ</string>
-    <string name="profile_umount_modules_summary">Bật tùy chọn này sẽ cho phép SukiSU Ultra khôi phục mọi file đã được các module sửa đổi trong ứng dụng này</string>
+    <string name="profile_umount_modules_summary">Bật tùy chọn này sẽ cho phép QyanSU Ultra khôi phục mọi file đã được các module sửa đổi trong ứng dụng này</string>
     <string name="profile_selinux_domain">Tên miền</string>
     <string name="profile_selinux_rules">Quy tắc</string>
     <string name="module_update">Cập nhật</string>
     <string name="module_downloading">Đang tải xuống module: %s</string>
     <string name="module_start_downloading">Bắt đầu tải xuống: %s</string>
-    <string name="new_version_available">Phiên bản mới %s đã có sẵn, nhấn để cập nhật!</string>
+    <string name="new_version_available">Phiên bản mới %s đã có sẵn, nhấn để cập nhật</string>
     <string name="launch_app">Mở</string>
     <string name="force_stop_app" formatted="false">Buộc dừng</string>
     <string name="restart_app">Khởi động lại</string>
@@ -91,8 +89,8 @@
     <string name="app_profile_template_readonly">Chỉ đọc</string>
     <string name="app_profile_template_id_exist">ID mẫu đã tồn tại!</string>
     <string name="app_profile_import_export">Nhập/Xuất</string>
-    <string name="app_profile_import_from_clipboard">Nhập từ Bộ nhớ tạm</string>
-    <string name="app_profile_export_to_clipboard">Xuất vào Bộ nhớ tạm</string>
+    <string name="app_profile_import_from_clipboard">Nhập từ bộ nhớ tạm clipboard</string>
+    <string name="app_profile_export_to_clipboard">Xuất vào bộ nhớ tạm clipboard</string>
     <string name="app_profile_template_export_empty">Không tìm thấy mẫu cục bộ để xuất!</string>
     <string name="app_profile_template_import_success">Đã nhập thành công</string>
     <string name="app_profile_template_sync">Đồng bộ hoá các mẫu trực tuyến</string>
@@ -111,18 +109,15 @@
     <string name="install_inactive_slot">Cài đặt vào phân vùng chưa được sử dụng (Sau OTA)</string>
     <string name="install_inactive_slot_warning">Thiết bị của bạn sẽ **BUỘC** phải khởi động vào phân vùng chưa được sử dụng!\nChỉ sử dụng tùy chọn này sau khi cập nhật OTA hoàn tất.\nTiếp tục?</string>
     <string name="install_next">Kế tiếp</string>
-    <string name="install_select_partition">Chọn phân vùng</string>
-    <string name="install_upload_lkm_file">Sử dụng file LKM cục bộ</string>
-    <string name="install_only_support_ko_file">Chỉ hỗ trợ các file .ko</string>
     <string name="select_file_tip">Phân vùng %1$s được khuyến nghị</string>
     <string name="select_kmi">Chọn KMI</string>
     <string name="settings_uninstall">Gỡ cài đặt</string>
     <string name="settings_uninstall_temporary">Gỡ cài đặt tạm thời</string>
-    <string name="settings_uninstall_permanent">Gỡ cài đặt vĩnh viễn</string>
+    <string name="settings_uninstall_permanent">Gỡ cài đặt sạch</string>
     <string name="settings_restore_stock_image">Khôi phục phân vùng khởi động về mặc định</string>
-    <string name="settings_uninstall_temporary_message">Gỡ cài đặt tạm thời SukiSU Ultra, khôi phục lại trạng thái ban đầu sau lần khởi động lại tiếp theo</string>
-    <string name="settings_uninstall_permanent_message">Gỡ cài đặt SukiSU Ultra (root và tất cả các module) sạch hoàn toàn, trả về trạng thái ban đầu</string>
-    <string name="settings_restore_stock_image_message">Khôi phục lại boot lúc đầu (nếu có bản sao lưu), thường được sử dụng trước OTA; nếu bạn cần gỡ hẳn SukiSU Ultra, sử dụng \"Gỡ cài đặt vĩnh viễn\"</string>
+    <string name="settings_uninstall_temporary_message">Gỡ cài đặt tạm thời QyanSU Ultra, khôi phục lại trạng thái ban đầu sau lần khởi động lại tiếp theo</string>
+    <string name="settings_uninstall_permanent_message">Gỡ cài đặt QyanSU Ultra (Root và tất cả các module) sạch hoàn toàn, trả về trạng thái ban đầu</string>
+    <string name="settings_restore_stock_image_message">Khôi phục lại boot lúc đầu (Nếu có bản sao lưu), thường được sử dụng trước OTA; nếu bạn cần gỡ hẳn QyanSU Ultra, sử dụng \"Gỡ cài đặt sạch\"</string>
     <string name="flashing">Đang Flash...</string>
     <string name="flash_success">Flash thành công</string>
     <string name="flash_failed">Flash thất bại</string>
@@ -165,16 +160,7 @@
     <string name="home_device_model">Model thiết bị</string>
     <string name="su_not_allowed">Không thể cấp quyền Superuser cho %s</string>
     <string name="settings_disable_su">Vô hiệu hoá lệnh SU</string>
-    <string name="settings_disable_su_summary">Vô hiệu hoá khả năng thực thi lệnh SU để lấy quyền root (các app đã cấp trước đó không bị ảnh hưởng)</string>
-    <string name="settings_disable_kernel_umount">Vô hiệu hoá kernel umount</string>
-    <string name="settings_disable_kernel_umount_summary">Vô hiệu hoá umount kernel-level được kiểm soát bởi KernelSU</string>
-    <string name="settings_enable_enhanced_security">Kích hoạt bảo mật nâng cao</string>
-    <string name="settings_enable_enhanced_security_summary">Cho phép chính sách bảo mật chặt chẽ hơn</string>
-    <string name="feature_status_unsupported_summary">Kernel không hỗ trợ tính năng này</string>
-    <string name="feature_status_managed_summary">Tính năng này được quản lý bởi một module</string>
-    <string name="settings_mode_default">Mặc định</string>
-    <string name="settings_mode_temp_enable">Tạm thời kích hoạt</string>
-    <string name="settings_mode_always_enable">Luôn luôn kích hoạt</string>
+    <string name="settings_disable_su_summary">Vô hiệu hoá khả năng thực thi lệnh SU để lấy quyền root (Những app đã cấp trước đó không bị ảnh hưởng)</string>
     <string name="module_install_multiple_confirm_with_names">Bạn có chắc muốn cài đặt các module %1$d không? \n\n%2$s</string>
     <string name="more_settings">Nhiều cài đặt hơn</string>
     <string name="selinux">SELinux</string>
@@ -190,8 +176,6 @@
     <string name="hide_susfs_status_summary">Ẩn thông tin trạng thái SuSFS ở trang chủ</string>
     <string name="hide_zygisk_implement">Ẩn trạng thái Zygisk</string>
     <string name="hide_zygisk_implement_summary">Ẩn thông tin triển khai Zygisk trên trang chủ</string>
-    <string name="hide_meta_module_implement">Ẩn trạng thái Siêu Module</string>
-    <string name="hide_meta_module_implement_summary">Ẩn thông tin triển khai Siêu Module trên trang chủ</string>
     <string name="hide_link_card">Ẩn trạng thái thẻ liên kết</string>
     <string name="hide_link_card_summary">Ẩn thông tin thẻ liên kết ở trang chủ</string>
     <string name="hide_tag_card">Ẩn các nhãn module</string>
@@ -201,7 +185,6 @@
     <string name="theme_light">Sáng</string>
     <string name="theme_dark">Tối</string>
     <string name="manual_hook">Hook thủ công</string>
-    <string name="inline_hook">Inline Hook</string>
     <string name="dynamic_color_title">Màu sắc động</string>
     <string name="dynamic_color_summary">Sử dụng màu sắc động làm chủ đề hệ thống</string>
     <string name="choose_theme_color">Chọn màu chủ đề</string>
@@ -233,11 +216,11 @@
     <string name="kpm_control">Tuỳ chỉnh</string>
     <string name="home_kpm_version">Phiên bản KPM</string>
     <string name="close_notice">Đóng</string>
-    <string name="kernel_module_notice">Các chức năng Kernel Module sau đây được KernelPatch phát triển và sửa đổi để tương thích với các chức năng Kernel Module của SukiSU Ultra</string>
-    <string name="home_ContributionCard_kernelsu">Tương lai của SukiSU Ultra</string>
+    <string name="kernel_module_notice">Các chức năng Kernel Module sau đây được KernelPatch phát triển và sửa đổi để tương thích với các chức năng Kernel Module của QyanSU Ultra</string>
+    <string name="home_ContributionCard_kernelsu">Tương lai của QyanSU Ultra</string>
     <string name="kpm_control_success">Thành công</string>
     <string name="kpm_control_failed">Thất bại</string>
-    <string name="home_click_to_ContributionCard_kernelsu">SukiSU Ultra sẽ là một nhánh tương đối độc lập của KSU trong tương lai, nhưng chúng tôi xin cảm ơn KernelSU và MKSU,... vì những đóng góp của họ!</string>
+    <string name="home_click_to_ContributionCard_kernelsu">QyanSU Ultra sẽ là một nhánh tương đối độc lập của KSU trong tương lai, nhưng chúng tôi xin cảm ơn KernelSU và MKSU,... vì những đóng góp của họ!</string>
     <string name="not_supported">Không được hỗ trợ</string>
     <string name="supported">Được hỗ trợ</string>
     <string name="kernel_patched">Kernel chưa được vá</string>
@@ -297,7 +280,7 @@
     <string name="background_set_success">Đã cài đặt hình nền thành công</string>
     <string name="background_removed">Đã xóa hình nền tùy chỉnh</string>
     <string name="icon_switch_title">Thay thế icon</string>
-    <string name="icon_switch_summary">Thay đổi icon SukiSU thành icon của KernelSU</string>
+    <string name="icon_switch_summary">Thay đổi icon QyanSU thành icon của KernelSU</string>
     <string name="icon_switched">Đã thay đổi icon</string>
     <!-- KPM display settings -->
     <string name="show_kpm_info">Ẩn chức năng KPM</string>
@@ -308,7 +291,7 @@
     <string name="engine_force_webuix">Sử dụng WebUI X</string>
     <string name="engine_force_ksu">Sử dụng KSU WebUI</string>
     <string name="use_webuix_eruda">Tiêm Eruda vào WebUI X</string>
-    <string name="use_webuix_eruda_summary">Chèn bảng điều khiển gỡ lỗi vào WebUI X để gỡ lỗi dễ dàng hơn. Yêu cầu bật gỡ lỗi Web</string>
+    <string name="use_webuix_eruda_summary">Chèn bảng điều khiển gỡ lỗi vào WebUI X để gỡ lỗi dễ dàng hơn. Yêu cầu bật gỡ lỗi web</string>
     <!-- DPI setting related strings -->
     <string name="app_dpi_title">Tuỳ chỉnh DPI</string>
     <string name="app_dpi_summary">Điều chỉnh DPI hiển thị</string>
@@ -333,8 +316,6 @@
     <string name="module_failed_count">Cài đặt module %d thất bại</string>
     <string name="module_download_error">Tải xuống module thất bại</string>
     <string name="kernel_flashing">Kernel Flashing</string>
-    <string name="warning_of_meta_module_title">Yêu cầu Siêu Module</string>
-    <string name="warning_of_meta_module_summary">Module này muốn mount /system, Siêu Module sẽ xử lý việc đó. Nếu không, nó có thể không hoạt động</string>
     <!-- 分类相关 -->
     <string name="category_all_apps">Tất cả</string>
     <string name="category_root_apps">Root</string>
@@ -406,6 +387,8 @@
     <string name="susfs_path_label">Đường dẫn</string>
     <string name="susfs_path_placeholder">Ví dụ: /system/addon.d</string>
     <string name="susfs_no_paths_configured">Không có Đường dẫn SuS nào được cấu hình</string>
+    <!-- SuSFS Umount Mode -->
+    <!-- SuSFS Run Umount -->
     <!-- SuSFS Reset Categories -->
     <string name="susfs_reset_paths_title">Đặt lại Đường dẫn SuS</string>
     <string name="susfs_reset_paths_message">Thao tác này sẽ xóa tất cả các cấu hình Đường dẫn SuS. Bạn có chắc chắn muốn tiếp tục không?</string>
@@ -428,7 +411,6 @@
     <string name="enable_log_feature_label">Hỗ trợ ghi nhật ký</string>
     <string name="hide_symbols_feature_label">Ẩn biểu tượng KSU SuSFS</string>
     <string name="sus_kstat_feature_label">Hỗ trợ SuS Kstat</string>
-    <string name="sus_map_feature_label">Hỗ trợ SuS Map</string>
     <!-- 可切换状态 -->
     <string name="susfs_feature_configurable">Nhấn để bật/tắt ghi nhật ký</string>
     <string name="susfs_enable_log_label">Kích hoạt nhật ký SuSFS</string>
@@ -522,7 +504,7 @@
     <string name="hide_bl_script">Trạng thái Lock BL</string>
     <string name="hide_bl_script_description">Ghi đè thuộc tính trạng thái lock bootloader ở chế độ dịch vụ late_start</string>
     <string name="cleanup_residue">Dọn rác</string>
-    <string name="cleanup_residue_description">Dọn dẹp các file và folder còn sót lại của các module và công cụ (có thể bị xóa nhầm, dẫn đến mất dữ liệu và không khởi động được)</string>
+    <string name="cleanup_residue_description">Dọn dẹp các file và folder còn sót lại của các module và công cụ (Có thể bị xóa nhầm, dẫn đến mất dữ liệu và không khởi động được)</string>
     <string name="susfs_edit_sus_path">Chỉnh sửa Đường dẫn SuS</string>
     <string name="edit_kstat_statically_title">Chỉnh sửa cấu hình Kstat tĩnh</string>
     <string name="edit_kstat_path_title">Chỉnh sửa Đường dẫn Kstat</string>
@@ -561,9 +543,8 @@
     <string name="unknown_signature">Không xác định</string>
     <string name="multi_manager_list">Trình quản lý đang hoạt động</string>
     <string name="no_active_manager">Trình quản lý đang không hoạt động</string>
-    <string name="default_signature">SukiSU</string>
+    <string name="default_signature">QyanSU</string>
     <string name="home_zygisk_implement">Triển khai Zygisk</string>
-    <string name="home_meta_module_implement">Triển khai Siêu Module</string>
     <!-- 循环路径相关 -->
     <string name="susfs_tab_sus_loop_paths">Đường dẫn Vòng lặp SuS</string>
     <string name="susfs_add_sus_loop_path">Thêm Đường dẫn Vòng lặp SuS</string>
@@ -595,7 +576,7 @@ Bật: Kích hoạt tính năng giả mạo sus tcontext của \'su\' thành \'u
     <string name="module_verified">Đã xác minh</string>
     <string name="module_signature_verified">Chữ ký module đã được xác minh</string>
     <string name="module_signature_verification">Xác minh chữ ký</string>
-    <string name="module_signature_verification_summary">Buộc xác minh chữ ký khi cài đặt module (chỉ khả dụng cho kiến trúc ARM)</string>
+    <string name="module_signature_verification_summary">Buộc xác minh chữ ký khi cài đặt module (Chỉ khả dụng cho kiến trúc ARM)</string>
     <string name="module_signature_invalid">Tác giả không xác định</string>
     <string name="module_signature_invalid_message">Các module chưa được ký có thể chưa hoàn chỉnh. Để bảo vệ thiết bị của bạn, module này đã bị chặn cài đặt</string>
     <string name="module_signature_verification_failed">Các module chưa được ký có thể chưa hoàn chỉnh. Bạn có muốn cài đặt module này từ một tác giả chưa xác định không?</string>
@@ -628,6 +609,17 @@ Bật: Kích hoạt tính năng giả mạo sus tcontext của \'su\' thành \'u
     <!-- KPM option radio group strings -->
     <string name="kpm_follow_kernel_file">Mặc định theo file Kernel</string>
     <string name="kpm_follow_kernel_description">Sử dụng file kernel mặc định mà không có bất kỳ sửa đổi nào về KPM</string>
+    <!-- UID Scanner Settings -->
+    <string name="uid_auto_scan_title">Chế độ quét danh sách ứng dụng người dùng</string>
+    <string name="uid_auto_scan_summary">Bật tuỳ chọn này thì chế độ người dùng sẽ được sử dụng để quét danh sách ứng dụng nhằm cải thiện tính ổn định (Nếu danh sách ứng dụng quét kernel bị kẹt và xảy ra các sự cố khác, bạn có thể thử bật tùy chọn này)</string>
+    <string name="uid_multi_user_scan_title">Quét ứng dụng nhiều người dùng</string>
+    <string name="uid_multi_user_scan_summary">Khi được bật, tất cả ứng dụng của người dùng sẽ được quét, bao gồm cả dữ liệu công việc, v.v</string>
+    <string name="uid_scanner_setting_failed">Thiết lập thất bại, vui lòng kiểm tra quyền</string>
+    <string name="clean_runtime_environment">Dọn dẹp môi trường hoạt động</string>
+    <string name="clean_runtime_environment_summary">Dọn dẹp các file hoạt động và dừng quét các dịch vụ</string>
+    <string name="clean_runtime_environment_confirm">Bạn có chắc chắn muốn dọn dẹp môi trường hoạt động không? Thao tác này sẽ dừng dịch vụ quét và xóa các file liên quan</string>
+    <string name="clean_runtime_environment_success">Dọn dẹp môi trường hoạt động thành công</string>
+    <string name="clean_runtime_environment_failed">Dọn dẹp môi trường hoạt động thất bại</string>
     <!-- 确认安装相关字符串 -->
     <string name="confirm_installation">Xác nhận cài đặt</string>
     <string name="confirm_multiple_installation">Xác nhận cài đặt (%d files)</string>
@@ -683,30 +675,6 @@ Bật: Kích hoạt tính năng giả mạo sus tcontext của \'su\' thành \'u
     <string name="log_viewer_load_more">Đang load thêm nhật ký</string>
     <string name="log_viewer_all_logs_loaded">Tất cả nhật ký đã được hiển thị</string>
     <!-- MiUI Uninstall Desc -->
-    <string name="miui_uninstall_title">Bạn muốn Gỡ cài đặt SukiSU sao 😭?</string>
-    <string name="miui_uninstall_content">Hừm, được rồi. Tôi sẽ bị bạn Gỡ cài đặt. Chức năng root sẽ không ngừng hoạt động chỉ vì bạn mất một Trình quản lý. Đừng lo chỉ Gỡ cài đặt Trình quản lý thôi thì không thể mất quyền truy cập root được đâu, zako~❤️.</string>
-    <string name="incompatible_kernel_msg">Trình quản lý hiện tại không tương thích với Kernel này! Vui lòng nâng cấp Kernel lên phiên bản %2$d hoặc cao hơn (hiện tại là %1$d)</string>
-    <string name="umount_path_manager">Quản lý Đường dẫn Umount</string>
-    <string name="umount_path_manager_summary">Quản lý Đường dẫn Kernel Umount</string>
-    <string name="umount_path_restart_notice">Cần khởi động lại để các thay đổi có hiệu lực. Hệ thống sẽ áp dụng cấu hình mới vào lần khởi động tiếp theo</string>
-    <string name="add_umount_path">Thêm Đường dẫn Umount</string>
-    <string name="mount_path">Đường dẫn Mount</string>
-    <string name="umount_flags">Umount Flags</string>
-    <string name="umount_flags_hint">0=Normal unmount, 2=MNT_DETACH</string>
-    <string name="flags">Flags</string>
-    <string name="confirm_delete">Xác nhận Xoá?</string>
-    <string name="confirm_delete_umount_path">Bạn có chắc chắn muốn xóa đường dẫn %s không?</string>
-    <string name="umount_path_added">Đã thêm đường dẫn, sẽ có hiệu lực sau khi khởi động lại</string>
-    <string name="umount_path_removed">Đường dẫn đã bị xóa, sẽ có hiệu lực sau khi khởi động lại</string>
-    <string name="operation_failed">Thao tác thất bại</string>
-    <string name="confirm_action">Xác nhận Khởi chạy?</string>
-    <string name="confirm_clear_custom_paths">Bạn có chắc chắn muốn xóa tất cả các đường dẫn tùy chỉnh không? (các đường dẫn mặc định sẽ được giữ nguyên)</string>
-    <string name="custom_paths_cleared">Đường dẫn tùy chỉnh đã được xóa</string>
-    <string name="clear_custom_paths">Xóa Đường dẫn Tùy chỉnh</string>
-    <string name="apply_config">Áp dụng Cấu hình</string>
-    <string name="config_applied">Cấu hình đã được áp dụng cho Kernel</string>
-    <string name="mnt_detach">MNT_DETACH</string>
-    <string name="group_contains_apps">Chứa %d ứng dụng</string>
-    <string name="settings_disable_sulog">Vô hiệu hoá ghi nhật ký Superuser</string>
-    <string name="settings_disable_sulog_summary">Vô hiệu hoá ghi nhật ký truy cập Superuser</string>
+    <string name="miui_uninstall_title">Bạn muốn xoá tôi đi sao 😭</string>
+    <string name="miui_uninstall_content">Hừm, được rồi, tôi sẽ bị bạn gỡ cài đặt. Chức năng root sẽ không ngừng hoạt động chỉ vì bạn mất một Trình quản lý. Đừng lo chỉ Gỡ cài đặt Trình quản lý thôi thì không thể mất quyền truy cập root được đâu, zako~❤️</string>
 </resources>

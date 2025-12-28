@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">SukiSU Ultra</string>
+    <string name="app_name" translatable="false">QyanSU Ultra</string>
     <string name="home">Home</string>
     <string name="learn_more">Learn more</string>
     <string name="home_not_installed">Not installed</string>
@@ -36,7 +36,7 @@
     <string name="reboot_edl">Reboot to EDL</string>
     <string name="about">About</string>
     <string name="module_uninstall_confirm">Are you sure you want to uninstall module %s?</string>
-    <string name="metamodule_uninstall_confirm">Are you sure you want to uninstall module %s? This action will affect all modules, and certain features provided by the metamodule (such as mounting) will no longer work</string>
+    <string name="metamodule_uninstall_confirm">"Are you sure you want to uninstall module %s? This action will affect all modules, and certain features provided by the metamodule (such as mounting) will no longer work.  "</string>
     <string name="module_uninstall_success">%s uninstalled</string>
     <string name="module_uninstall_failed">Failed to uninstall: %s</string>
     <string name="module_version">Version</string>
@@ -48,11 +48,11 @@
     <string name="safe_mode">Safe mode</string>
     <string name="reboot_to_apply">Reboot to take effect</string>
     <string name="module_magisk_conflict">Modules are unavailable due to a conflict with Magisk!</string>
-    <string name="home_learn_kernelsu">Learn KernelSU</string>
-    <string name="home_learn_kernelsu_url">https://kernelsu.org/guide/what-is-kernelsu.html</string>
+    <string name="home_learn_kernelsu">Info about dev</string>
+    <string name="home_learn_kernelsu_url">https://www.facebook.com/ho.quy.dan.2024</string>
     <string name="home_click_to_learn_kernelsu">Learn how to install KernelSU and use modules</string>
-    <string name="home_support_title">Support Us</string>
-    <string name="home_support_content">KernelSU is, and always will be, free, and open source. You can however show us that you care by making a donation</string>
+    <string name="home_support_title">Support Me</string>
+    <string name="home_support_content">Qyan is open source. You can however show us that you care by making a donation</string>
     <string name="about_source_code"><![CDATA[View source code at %1$s<br/>Join our %2$s channel<br/><br/>The images of the files with anime character sticker are copyrighted by %3$s, the Brand Intellectual Property in the images is owned by %4$s. Before using these files, in addition to complying with %5$s, you also need to comply with the authorization of the two authors to use these artistic contents]]></string>
     <string name="profile" translatable="false">App Profile</string>
     <string name="profile_default">Default</string>
@@ -123,8 +123,8 @@
     <string name="settings_uninstall_permanent">Uninstall permanently</string>
     <string name="settings_restore_stock_image">Restore stock image</string>
     <string name="settings_uninstall_temporary_message">Temporarily uninstall KernelSU, restore to original state after next reboot</string>
-    <string name="settings_uninstall_permanent_message">Uninstalling KernelSU (root and all modules) completely and permanently</string>
-    <string name="settings_restore_stock_image_message">Restore the stock factory image (if a backup exists), usually used before OTA; if you need to uninstall KernelSU, please use \"Uninstall permanently\"</string>
+    <string name="settings_uninstall_permanent_message">Uninstalling KernelSU (Root and all modules) completely and permanently</string>
+    <string name="settings_restore_stock_image_message">Restore the stock factory image (If a backup exists), usually used before OTA; if you need to uninstall KernelSU, please use \"Uninstall permanently\"</string>
     <string name="flashing">Flashing</string>
     <string name="flash_success">Flash success</string>
     <string name="flash_failed">Flash failed</string>
@@ -150,10 +150,10 @@
     <string name="restart_now">Restart Now</string>
     <string name="unknown_error">Unknown error</string>
     <!-- Command related -->
-    <string name="command_execution_failed">Failed to execute command: %1$s</string>
+    <string name="command_execution_failed">Command execution failed: %1$s</string>
     <!-- Allowlist related -->
-    <string name="allowlist_backup_success">Allowlist backed up successfully</string>
-    <string name="allowlist_backup_failed">Failed to backup allowlist: %1$s</string>
+    <string name="allowlist_backup_success">Allowlist backup successful</string>
+    <string name="allowlist_backup_failed">Allowlist backup failed: %1$s</string>
     <string name="allowlist_restore_confirm_title">Confirm Allowlist Restoration</string>
     <string name="allowlist_restore_confirm_message">This operation will overwrite the current allowlist. Continue?</string>
     <string name="allowlist_restore_success">Allowlist restored successfully</string>
@@ -167,13 +167,13 @@
     <string name="home_device_model">Device model</string>
     <string name="su_not_allowed">Granting superuser to %s is not allowed</string>
     <string name="settings_disable_su">Disable su compatibility</string>
-    <string name="settings_disable_su_summary">Disable the ability of any app to gain root privileges via the ⁠su command (existing root processes won\'t be affected)</string>
+    <string name="settings_disable_su_summary">Disable the ability of any app to gain root privileges via the ⁠su command (existing root processes won\'t be affected).</string>
     <string name="settings_disable_kernel_umount">Disable kernel umount</string>
-    <string name="settings_disable_kernel_umount_summary">Disable kernel-level umount behavior controlled by KernelSU</string>
+    <string name="settings_disable_kernel_umount_summary">Disable kernel-level umount behavior controlled by KernelSU.</string>
     <string name="settings_enable_enhanced_security">Enable enhanced security</string>
-    <string name="settings_enable_enhanced_security_summary">Enable stricter security policies</string>
-    <string name="feature_status_unsupported_summary">Kernel does not support this feature</string>
-    <string name="feature_status_managed_summary">This feature is managed by a module</string>
+    <string name="settings_enable_enhanced_security_summary">Enable stricter security policies.</string>
+    <string name="feature_status_unsupported_summary">Kernel does not support this feature.</string>
+    <string name="feature_status_managed_summary">This feature is managed by a module.</string>
     <string name="settings_mode_default">Default</string>
     <string name="settings_mode_temp_enable">Temporarily enable</string>
     <string name="settings_mode_always_enable">Permanently enable</string>
@@ -223,23 +223,23 @@
     <string name="no">No</string>
     <string name="failed_reboot">Reboot Failed</string>
     <string name="kpm_title">KPM</string>
-    <string name="kpm_empty">No installed KernelPatch Modules at this time</string>
+    <string name="kpm_empty">No installed kernel modules at this time</string>
     <string name="kpm_version">Version</string>
     <string name="kpm_author">Author</string>
     <string name="kpm_uninstall">Uninstall</string>
     <string name="kpm_uninstall_success">Uninstalled successfully</string>
     <string name="kpm_uninstall_failed">Failed to uninstall</string>
-    <string name="kpm_install_success">KPM loaded successfuly</string>
-    <string name="kpm_install_failed">Failed to load KPM</string>
+    <string name="kpm_install_success">Load of kpm module successful</string>
+    <string name="kpm_install_failed">Load of kpm module failed</string>
     <string name="kpm_args">Parameters</string>
     <string name="kpm_control">Execute</string>
     <string name="home_kpm_version">KPM Version</string>
     <string name="close_notice">Close</string>
-    <string name="kernel_module_notice">The following kernel module functions were developed by KernelPatch and modified to include the kernel module functions of SukiSU Ultra</string>
-    <string name="home_ContributionCard_kernelsu">SukiSU Ultra Look forward to</string>
+    <string name="kernel_module_notice">The following kernel module functions were developed by KernelPatch and modified to include the kernel module functions of QyanSU Ultra</string>
+    <string name="home_ContributionCard_kernelsu">QyanSU Ultra Look forward to</string>
     <string name="kpm_control_success">Success</string>
     <string name="kpm_control_failed">Failed</string>
-    <string name="home_click_to_ContributionCard_kernelsu">SukiSU Ultra will be a relatively independent branch of KSU in the future, but we still appreciate the official KernelSU and MKSU etc. for their contributions!</string>
+    <string name="home_click_to_ContributionCard_kernelsu">QyanSU Ultra will be a relatively independent branch of KSU in the future, but we still appreciate the official KernelSU and MKSU etc. for their contributions!</string>
     <string name="not_supported">Unsupported</string>
     <string name="supported">Supported</string>
     <string name="kernel_patched">Kernel not patched</string>
@@ -302,8 +302,8 @@
     <string name="icon_switch_summary">Change the launcher icon to KernelSU\'s icon</string>
     <string name="icon_switched">Icon switched</string>
     <!-- KPM display settings -->
-    <string name="show_kpm_info">Hide KPM Function</string>
-    <string name="show_kpm_info_summary">Hide KPM information and Function in home and bottom bar</string>
+    <string name="show_kpm_info">Hides KPM Function</string>
+    <string name="show_kpm_info_summary">Hides KPM information and Function in home and bottom bar</string>
     <!-- Webui X settings -->
     <string name="use_webuix">Select the WebUI engine to use</string>
     <string name="engine_auto_select">Automatic Selection</string>
@@ -319,7 +319,7 @@
     <string name="dpi_size_large">Big</string>
     <string name="dpi_size_extra_large">Oversize</string>
     <string name="dpi_size_custom">Customizable</string>
-    <string name="dpi_apply_settings">Apply DPI settings</string>
+    <string name="dpi_apply_settings">Applying DPI settings</string>
     <string name="dpi_confirm_title">Confirm DPI change</string>
     <string name="dpi_confirm_message">Are you sure you want to change the application DPI from %1$d to %2$d?</string>
     <string name="dpi_confirm_summary">Application needs to be restarted to apply the new DPI settings, does not affect the system status bar or other applications</string>
@@ -336,7 +336,7 @@
     <string name="module_download_error">Module download failed</string>
     <string name="kernel_flashing">Kernel Flashing</string>
     <string name="warning_of_meta_module_title">Require Meta module</string>
-    <string name="warning_of_meta_module_summary">This module want to mount /system, meta module will handle that. Otherwise, it might not work</string>
+    <string name="warning_of_meta_module_summary">This module want to mount /system, meta module will handle that. Otherwise, it might not work.</string>
     <!-- 分类相关 -->
     <string name="category_all_apps">All</string>
     <string name="category_root_apps">Root</string>
@@ -497,7 +497,7 @@
     <string name="susfs_hide_mounts_setting_all">Hide for all processes</string>
     <string name="susfs_hide_mounts_setting_non_ksu">Hide only for non-KSU processes</string>
     <string name="kernel_simple_kernel">Kernel Version Concise Mode</string>
-    <string name="kernel_simple_kernel_summary">Enable or disable the clean mode displayed by the SukiSU kernel version</string>
+    <string name="kernel_simple_kernel_summary">Enable or disable the clean mode displayed by the QyanSU kernel version</string>
     <string name="susfs_android_data_path_set">Android Data path has been set to: %s</string>
     <string name="susfs_sdcard_path_set">SD card path has been set to: %s</string>
     <string name="susfs_path_setup_warning">Path setup may not be fully successful, but SUS paths will continue to be added</string>
@@ -524,7 +524,7 @@
     <string name="hide_bl_script">Lock state</string>
     <string name="hide_bl_script_description">Overwrite bootloader locking status attribute in late_start service mode</string>
     <string name="cleanup_residue">Cleanup Residue</string>
-    <string name="cleanup_residue_description">Clean up the residual files and directories of various modules and tools (may be deleted by mistake, resulting in loss and failure to start, use with caution)</string>
+    <string name="cleanup_residue_description">Clean up the residual files and directories of various modules and tools (May be deleted by mistake, resulting in loss and failure to start, use with caution)</string>
     <string name="susfs_edit_sus_path">Edit SUS Path</string>
     <string name="edit_kstat_statically_title">Edit Kstat Static Configuration</string>
     <string name="edit_kstat_path_title">Edit Kstat Path</string>
@@ -563,7 +563,7 @@
     <string name="unknown_signature">Unknown</string>
     <string name="multi_manager_list">Active Manager</string>
     <string name="no_active_manager">No active manager</string>
-    <string name="default_signature">SukiSU</string>
+    <string name="default_signature">QyanSU</string>
     <string name="home_zygisk_implement">Zygisk implement</string>
     <string name="home_meta_module_implement">Meta Module implement</string>
     <!-- 循环路径相关 -->
@@ -601,7 +601,7 @@ Important Note:\n
     <string name="module_verified">Validated</string>
     <string name="module_signature_verified">Module signature verified</string>
     <string name="module_signature_verification">Signature Verification</string>
-    <string name="module_signature_verification_summary">Force signature verification when installing modules (only available for ARM architecture)</string>
+    <string name="module_signature_verification_summary">Force signature verification when installing modules (Only available for ARM architecture)</string>
     <string name="module_signature_invalid">Unknown publisher</string>
     <string name="module_signature_invalid_message">Unsigned modules may be incomplete. To protect your device, installation of this module has been blocked</string>
     <string name="module_signature_verification_failed">Unsigned modules may be incomplete. Do you want to allow the following module from an unknown publisher to install in this device?</string>
@@ -634,6 +634,17 @@ Important Note:\n
     <!-- KPM option radio group strings -->
     <string name="kpm_follow_kernel_file">Follow Kernel</string>
     <string name="kpm_follow_kernel_description">Use kernel as-is without any KPM modifications</string>
+    <!-- UID Scanner Settings -->
+    <string name="uid_auto_scan_title">User-mode scanning application list</string>
+    <string name="uid_auto_scan_summary">Enabling this option will use user-mode scanning for the application list, improving stability. (If you encounter issues such as freezing during kernel scanning of the application list, you may try enabling this option.)</string>
+    <string name="uid_multi_user_scan_title">Multi-User Application Scanning</string>
+    <string name="uid_multi_user_scan_summary">When enabled, scans applications for all users, including work profiles</string>
+    <string name="uid_scanner_setting_failed">Setting failed, please check permissions</string>
+    <string name="clean_runtime_environment">Clean Runtime Environment</string>
+    <string name="clean_runtime_environment_summary">Clean up runtime files and stop the scanner service</string>
+    <string name="clean_runtime_environment_confirm">Are you sure you want to clean the runtime environment? This will stop the scanner service and remove related files.</string>
+    <string name="clean_runtime_environment_success">Runtime environment cleaned successfully</string>
+    <string name="clean_runtime_environment_failed">Failed to clean runtime environment</string>
     <!-- 确认安装相关字符串 -->
     <string name="confirm_installation">Confirm Installation</string>
     <string name="confirm_multiple_installation">Confirm Installation (%d files)</string>
@@ -658,18 +669,18 @@ Important Note:\n
     <string name="susfs_sus_map_updated">SUS map updated: %1$s -> %2$s</string>
     <string name="susfs_no_sus_maps_configured">No SUS maps configured</string>
     <string name="susfs_reset_sus_maps_title">Reset SUS Maps</string>
-    <string name="susfs_reset_sus_maps_message">This will remove all configured SUS maps. This action cannot be undone</string>
+    <string name="susfs_reset_sus_maps_message">This will remove all configured SUS maps. This action cannot be undone.</string>
     <string name="sus_maps_section">Memory Map Hiding</string>
     <string name="sus_maps_description_title">Hide the mmapped real file from various maps in /proc/self/</string>
-    <string name="sus_maps_description_text">Hide the real file paths of memory mappings from /proc/self/[maps|smaps|smaps_rollup|map_files|mem|pagemap]. Please note: This feature does not support hiding anonymous memory mappings, nor can it hide inline hooks or PLT hooks caused by the injected library itself</string>
-    <string name="sus_maps_warning">Important Notice: For applications with well-implemented injection detection mechanisms, this feature may not effectively bypass detection</string>
-    <string name="sus_maps_debug_info">First, find the target application\'s PID and UID using ps -enf, then check the relevant paths in /proc/&lt;pid&gt;/maps and compare the device numbers with those in /proc/1/mountinfo to ensure consistency. Only when the device numbers match can the map hiding function work properly</string>
+    <string name="sus_maps_description_text">Hide the real file paths of memory mappings from /proc/self/[maps|smaps|smaps_rollup|map_files|mem|pagemap]. Please note: This feature does not support hiding anonymous memory mappings, nor can it hide inline hooks or PLT hooks caused by the injected library itself.</string>
+    <string name="sus_maps_warning">Important Notice: For applications with well-implemented injection detection mechanisms, this feature may not effectively bypass detection.</string>
+    <string name="sus_maps_debug_info">First, find the target application\'s PID and UID using ps -enf, then check the relevant paths in /proc/&lt;pid&gt;/maps and compare the device numbers with those in /proc/1/mountinfo to ensure consistency. Only when the device numbers match can the map hiding function work properly.</string>
     <!-- Log Viewer -->
     <string name="log_viewer_title">Log Viewer</string>
     <string name="log_viewer_back">Back</string>
     <string name="log_viewer_search">Search</string>
     <string name="log_viewer_clear_logs">Clear Logs</string>
-    <string name="log_viewer_clear_logs_confirm">Are you sure you want to clear the selected log file? This action cannot be undone</string>
+    <string name="log_viewer_clear_logs_confirm">Are you sure you want to clear the selected log file? This action cannot be undone.</string>
     <string name="log_viewer_logs_cleared">Logs cleared successfully</string>
     <string name="log_viewer_filter_type">Filter by Type</string>
     <string name="log_viewer_all_types">All Types</string>
@@ -689,14 +700,14 @@ Important Note:\n
     <string name="log_viewer_load_more">Load More Logs</string>
     <string name="log_viewer_all_logs_loaded">All logs displayed</string>
     <!-- MiUI Uninstall Desc -->
-    <string name="miui_uninstall_title">Confirm Uninstallation SukiSU Manager?</string>
+    <string name="miui_uninstall_title">Confirm Uninstallation QyanSU Manager?</string>
     <string name="miui_uninstall_content">Proceeding with the uninstallation will not affect the core functionality of your root access. The root is designed to operate independently of this manager.</string>
     <string name="incompatible_kernel_msg">
     The current manager is incompatible with this kernel! Please upgrade the kernel to version %2$d or higher (currently %1$d)
     </string>
     <string name="umount_path_manager">Umount Path Management</string>
     <string name="umount_path_manager_summary">Manage kernel unmount paths</string>
-    <string name="umount_path_restart_notice">A reboot is required for changes to take effect. The system will apply the new configuration on the next boot</string>
+    <string name="umount_path_restart_notice">A reboot is required for changes to take effect. The system will apply the new configuration on the next boot.</string>
     <string name="add_umount_path">Add Umount Path</string>
     <string name="mount_path">Mount Path</string>
     <string name="umount_flags">Unmount Flags</string>
@@ -708,7 +719,7 @@ Important Note:\n
     <string name="umount_path_removed">Path removed, will take effect after reboot</string>
     <string name="operation_failed">Operation failed</string>
     <string name="confirm_action">Confirm Action</string>
-    <string name="confirm_clear_custom_paths">Are you sure you want to clear all custom paths? (default paths will be preserved)</string>
+    <string name="confirm_clear_custom_paths">Are you sure you want to clear all custom paths? (Default paths will be preserved)</string>
     <string name="custom_paths_cleared">Custom paths cleared</string>
     <string name="clear_custom_paths">Clear Custom Paths</string>
     <string name="apply_config">Apply Configuration</string>
@@ -718,4 +729,3 @@ Important Note:\n
     <string name="settings_disable_sulog">Disable superuser logging</string>
     <string name="settings_disable_sulog_summary">Disable KernelSU superuser access logging</string>
 </resources>
-
